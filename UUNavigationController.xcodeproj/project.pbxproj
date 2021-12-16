@@ -1,0 +1,958 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2FBA71016AC0F8EC89411BAA /* Pods_Example_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FF9F79904897D16152AC3A4 /* Pods_Example_iOS.framework */; };
+		CE5057D827343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5057D627343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.m */; };
+		CE5057D927343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.h in Headers */ = {isa = PBXBuildFile; fileRef = CE5057D727343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.h */; };
+		CE5057EB273554B5002B2B46 /* UUAlertAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CE5057E9273554B5002B2B46 /* UUAlertAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE5057EC273554B5002B2B46 /* UUAlertAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5057EA273554B5002B2B46 /* UUAlertAnimator.m */; };
+		CE7A2FBA2732AD60001E5F94 /* UUNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FAC2732AD60001E5F94 /* UUNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE7A2FC52732AD81001E5F94 /* UIViewController+UU.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FC32732AD81001E5F94 /* UIViewController+UU.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE7A2FC92732AD94001E5F94 /* UIViewController+UUPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FC72732AD94001E5F94 /* UIViewController+UUPrivate.h */; };
+		CE7A2FCA2732AD94001E5F94 /* UIViewController+UUPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FC82732AD94001E5F94 /* UIViewController+UUPrivate.m */; };
+		CE7A2FCC2732ADD0001E5F94 /* UUNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FCB2732ADD0001E5F94 /* UUNavigationController.m */; };
+		CE7A2FCF2732AF56001E5F94 /* UINavigationController+UUPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FCD2732AF56001E5F94 /* UINavigationController+UUPrivate.h */; };
+		CE7A2FD32732AF62001E5F94 /* UINavigationController+UU.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FD12732AF62001E5F94 /* UINavigationController+UU.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE7A2FD42732AF62001E5F94 /* UINavigationController+UUPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FD22732AF62001E5F94 /* UINavigationController+UUPrivate.m */; };
+		CE7A2FD72732B349001E5F94 /* NSObject+UUPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FD52732B349001E5F94 /* NSObject+UUPrivate.h */; };
+		CE7A2FD82732B349001E5F94 /* NSObject+UUPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FD62732B349001E5F94 /* NSObject+UUPrivate.m */; };
+		CE7A2FDF2732B982001E5F94 /* UUTransparentBackgroundView.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FDD2732B982001E5F94 /* UUTransparentBackgroundView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE7A2FE02732B982001E5F94 /* UUTransparentBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FDE2732B982001E5F94 /* UUTransparentBackgroundView.m */; };
+		CE7A2FE92732BB31001E5F94 /* NSMutableArray+UUPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FE52732BB31001E5F94 /* NSMutableArray+UUPrivate.h */; };
+		CE7A2FEA2732BB31001E5F94 /* NSMutableArray+UUPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FE62732BB31001E5F94 /* NSMutableArray+UUPrivate.m */; };
+		CE7A2FEB2732BB31001E5F94 /* NSArray+UUPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FE72732BB31001E5F94 /* NSArray+UUPrivate.m */; };
+		CE7A2FEC2732BB31001E5F94 /* NSArray+UUPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FE82732BB31001E5F94 /* NSArray+UUPrivate.h */; };
+		CE9F9B8C274F8900000AA482 /* UUFadeAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9F9B8A274F8900000AA482 /* UUFadeAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE9F9B8D274F8900000AA482 /* UUFadeAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9F9B8A274F8900000AA482 /* UUFadeAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CE9F9B8E274F8900000AA482 /* UUFadeAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9F9B8B274F8900000AA482 /* UUFadeAnimator.m */; };
+		CE9F9B8F274F8900000AA482 /* UUFadeAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9F9B8B274F8900000AA482 /* UUFadeAnimator.m */; };
+		CEC9911E273C06180058A112 /* UUPresentAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CEC9911C273C06180058A112 /* UUPresentAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEC9911F273C06180058A112 /* UUPresentAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9911D273C06180058A112 /* UUPresentAnimator.m */; };
+		CED3D65A27391FA7007AAB6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3D65927391FA7007AAB6F /* AppDelegate.swift */; };
+		CED3D65C27391FA7007AAB6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3D65B27391FA7007AAB6F /* SceneDelegate.swift */; };
+		CED3D65E27391FA7007AAB6F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3D65D27391FA7007AAB6F /* ViewController.swift */; };
+		CED3D66127391FA7007AAB6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED3D65F27391FA7007AAB6F /* Main.storyboard */; };
+		CED3D66327391FAA007AAB6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CED3D66227391FAA007AAB6F /* Assets.xcassets */; };
+		CED3D66627391FAA007AAB6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CED3D66427391FAA007AAB6F /* LaunchScreen.storyboard */; };
+		CED3D66D27392102007AAB6F /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3D66B27392101007AAB6F /* AlertViewController.swift */; };
+		CED3D66E27392102007AAB6F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3D66C27392101007AAB6F /* RootViewController.swift */; };
+		CED3D66F27392114007AAB6F /* UUNavigationController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A2FA92732AD60001E5F94 /* UUNavigationController.framework */; };
+		CED3D67027392114007AAB6F /* UUNavigationController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE7A2FA92732AD60001E5F94 /* UUNavigationController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CED3D68027392AE9007AAB6F /* UUPushAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CED3D67E27392AE9007AAB6F /* UUPushAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CED3D68127392AE9007AAB6F /* UUPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CED3D67F27392AE9007AAB6F /* UUPushAnimator.m */; };
+		CED3D684273A673A007AAB6F /* UUActionSheetAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CED3D682273A673A007AAB6F /* UUActionSheetAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CED3D685273A673A007AAB6F /* UUActionSheetAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CED3D683273A673A007AAB6F /* UUActionSheetAnimator.m */; };
+		CED3D687273A6E31007AAB6F /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3D686273A6E31007AAB6F /* ActionSheetViewController.swift */; };
+		CEE91753274F3DE2009F5964 /* UUNavigationController_tvOS.docc in Sources */ = {isa = PBXBuildFile; fileRef = CEE91752274F3DE1009F5964 /* UUNavigationController_tvOS.docc */; };
+		CEE9175F274F3DE2009F5964 /* UUNavigationController_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE91751274F3DE1009F5964 /* UUNavigationController_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEE91767274F3E55009F5964 /* UUNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FAC2732AD60001E5F94 /* UUNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEE91768274F3E55009F5964 /* UUPresentAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9911D273C06180058A112 /* UUPresentAnimator.m */; };
+		CEE91769274F3E55009F5964 /* NSMutableArray+UUPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FE52732BB31001E5F94 /* NSMutableArray+UUPrivate.h */; };
+		CEE9176A274F3E55009F5964 /* UIViewController+UU.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FC32732AD81001E5F94 /* UIViewController+UU.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEE9176B274F3E55009F5964 /* UUAlertAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5057EA273554B5002B2B46 /* UUAlertAnimator.m */; };
+		CEE9176C274F3E55009F5964 /* UUPresentAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CEC9911C273C06180058A112 /* UUPresentAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEE9176D274F3E56009F5964 /* UUActionSheetAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CED3D683273A673A007AAB6F /* UUActionSheetAnimator.m */; };
+		CEE9176E274F3E56009F5964 /* NSObject+UUPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FD52732B349001E5F94 /* NSObject+UUPrivate.h */; };
+		CEE9176F274F3E56009F5964 /* UINavigationController+UUPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FCD2732AF56001E5F94 /* UINavigationController+UUPrivate.h */; };
+		CEE91770274F3E56009F5964 /* UINavigationController+UUPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FD22732AF62001E5F94 /* UINavigationController+UUPrivate.m */; };
+		CEE91771274F3E56009F5964 /* NSObject+UUPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FD62732B349001E5F94 /* NSObject+UUPrivate.m */; };
+		CEE91772274F3E56009F5964 /* UU__UIViewControllerOneToOneTransitionContext.h in Headers */ = {isa = PBXBuildFile; fileRef = CE5057D727343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.h */; };
+		CEE91773274F3E56009F5964 /* UIViewController+UUPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FC72732AD94001E5F94 /* UIViewController+UUPrivate.h */; };
+		CEE91774274F3E56009F5964 /* UUPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CED3D67F27392AE9007AAB6F /* UUPushAnimator.m */; };
+		CEE91775274F3E56009F5964 /* UIViewController+UUPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FC82732AD94001E5F94 /* UIViewController+UUPrivate.m */; };
+		CEE91776274F3E56009F5964 /* NSArray+UUPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FE82732BB31001E5F94 /* NSArray+UUPrivate.h */; };
+		CEE91777274F3E56009F5964 /* UUActionSheetAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CED3D682273A673A007AAB6F /* UUActionSheetAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEE91778274F3E56009F5964 /* UUAlertAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CE5057E9273554B5002B2B46 /* UUAlertAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEE91779274F3E56009F5964 /* UUTransparentBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FDE2732B982001E5F94 /* UUTransparentBackgroundView.m */; };
+		CEE9177A274F3E56009F5964 /* UU__UIViewControllerOneToOneTransitionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5057D627343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.m */; };
+		CEE9177B274F3E56009F5964 /* UUPushAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CED3D67E27392AE9007AAB6F /* UUPushAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEE9177C274F3E56009F5964 /* UUTransparentBackgroundView.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FDD2732B982001E5F94 /* UUTransparentBackgroundView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEE9177D274F3E56009F5964 /* UINavigationController+UU.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FD12732AF62001E5F94 /* UINavigationController+UU.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEE91780274F3E56009F5964 /* NSArray+UUPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FE72732BB31001E5F94 /* NSArray+UUPrivate.m */; };
+		CEE91781274F3E56009F5964 /* NSMutableArray+UUPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FE62732BB31001E5F94 /* NSMutableArray+UUPrivate.m */; };
+		CEE91782274F3E56009F5964 /* UUNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FCB2732ADD0001E5F94 /* UUNavigationController.m */; };
+		CEE9178A274F65A2009F5964 /* UUNavigationControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE91789274F65A2009F5964 /* UUNavigationControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEE9178B274F65A2009F5964 /* UUNavigationControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE91789274F65A2009F5964 /* UUNavigationControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEE9178D274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE9178C274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEE9178E274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE9178C274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEF2074B274F733A009C8FFC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2074A274F733A009C8FFC /* Extensions.swift */; };
+		CEF9C7D0276B99B0009C6BD5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF9C7CF276B99B0009C6BD5 /* SearchViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CED3D67127392114007AAB6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE7A2FA02732AD60001E5F94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE7A2FA82732AD60001E5F94;
+			remoteInfo = UUNavigationController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CED3D67327392114007AAB6F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CED3D67027392114007AAB6F /* UUNavigationController.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		287C5D918AE5FE0DDE4DC356 /* Pods-Example iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example iOS.debug.xcconfig"; path = "Target Support Files/Pods-Example iOS/Pods-Example iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		3B4395EB4DB07A413DA37802 /* Pods-Example iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example iOS.release.xcconfig"; path = "Target Support Files/Pods-Example iOS/Pods-Example iOS.release.xcconfig"; sourceTree = "<group>"; };
+		7FF9F79904897D16152AC3A4 /* Pods_Example_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32F96A6D4966BF466E80D24 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C59FF73AF1981A0378ABDF33 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
+		CE5057D627343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UU__UIViewControllerOneToOneTransitionContext.m; sourceTree = "<group>"; };
+		CE5057D727343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UU__UIViewControllerOneToOneTransitionContext.h; sourceTree = "<group>"; };
+		CE5057E9273554B5002B2B46 /* UUAlertAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUAlertAnimator.h; sourceTree = "<group>"; };
+		CE5057EA273554B5002B2B46 /* UUAlertAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUAlertAnimator.m; sourceTree = "<group>"; };
+		CE7A2FA92732AD60001E5F94 /* UUNavigationController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UUNavigationController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE7A2FAC2732AD60001E5F94 /* UUNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNavigationController.h; sourceTree = "<group>"; };
+		CE7A2FC32732AD81001E5F94 /* UIViewController+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+UU.h"; sourceTree = "<group>"; };
+		CE7A2FC72732AD94001E5F94 /* UIViewController+UUPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+UUPrivate.h"; sourceTree = "<group>"; };
+		CE7A2FC82732AD94001E5F94 /* UIViewController+UUPrivate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+UUPrivate.m"; sourceTree = "<group>"; };
+		CE7A2FCB2732ADD0001E5F94 /* UUNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUNavigationController.m; sourceTree = "<group>"; };
+		CE7A2FCD2732AF56001E5F94 /* UINavigationController+UUPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+UUPrivate.h"; sourceTree = "<group>"; };
+		CE7A2FD12732AF62001E5F94 /* UINavigationController+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+UU.h"; sourceTree = "<group>"; };
+		CE7A2FD22732AF62001E5F94 /* UINavigationController+UUPrivate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+UUPrivate.m"; sourceTree = "<group>"; };
+		CE7A2FD52732B349001E5F94 /* NSObject+UUPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+UUPrivate.h"; sourceTree = "<group>"; };
+		CE7A2FD62732B349001E5F94 /* NSObject+UUPrivate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+UUPrivate.m"; sourceTree = "<group>"; };
+		CE7A2FDD2732B982001E5F94 /* UUTransparentBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUTransparentBackgroundView.h; sourceTree = "<group>"; };
+		CE7A2FDE2732B982001E5F94 /* UUTransparentBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUTransparentBackgroundView.m; sourceTree = "<group>"; };
+		CE7A2FE52732BB31001E5F94 /* NSMutableArray+UUPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+UUPrivate.h"; sourceTree = "<group>"; };
+		CE7A2FE62732BB31001E5F94 /* NSMutableArray+UUPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+UUPrivate.m"; sourceTree = "<group>"; };
+		CE7A2FE72732BB31001E5F94 /* NSArray+UUPrivate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+UUPrivate.m"; sourceTree = "<group>"; };
+		CE7A2FE82732BB31001E5F94 /* NSArray+UUPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+UUPrivate.h"; sourceTree = "<group>"; };
+		CE9F9B8A274F8900000AA482 /* UUFadeAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUFadeAnimator.h; sourceTree = "<group>"; };
+		CE9F9B8B274F8900000AA482 /* UUFadeAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUFadeAnimator.m; sourceTree = "<group>"; };
+		CEC9911C273C06180058A112 /* UUPresentAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUPresentAnimator.h; sourceTree = "<group>"; };
+		CEC9911D273C06180058A112 /* UUPresentAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUPresentAnimator.m; sourceTree = "<group>"; };
+		CED3D65727391FA7007AAB6F /* Example iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED3D65927391FA7007AAB6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CED3D65B27391FA7007AAB6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CED3D65D27391FA7007AAB6F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CED3D66027391FA7007AAB6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CED3D66227391FAA007AAB6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CED3D66527391FAA007AAB6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CED3D66727391FAA007AAB6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED3D66B27392101007AAB6F /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		CED3D66C27392101007AAB6F /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		CED3D67E27392AE9007AAB6F /* UUPushAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUPushAnimator.h; sourceTree = "<group>"; };
+		CED3D67F27392AE9007AAB6F /* UUPushAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUPushAnimator.m; sourceTree = "<group>"; };
+		CED3D682273A673A007AAB6F /* UUActionSheetAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUActionSheetAnimator.h; sourceTree = "<group>"; };
+		CED3D683273A673A007AAB6F /* UUActionSheetAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUActionSheetAnimator.m; sourceTree = "<group>"; };
+		CED3D686273A6E31007AAB6F /* ActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
+		CEE9174F274F3DE1009F5964 /* UUNavigationController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UUNavigationController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEE91751274F3DE1009F5964 /* UUNavigationController_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNavigationController_tvOS.h; sourceTree = "<group>"; };
+		CEE91752274F3DE1009F5964 /* UUNavigationController_tvOS.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = UUNavigationController_tvOS.docc; sourceTree = "<group>"; };
+		CEE91789274F65A2009F5964 /* UUNavigationControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNavigationControllerDelegate.h; sourceTree = "<group>"; };
+		CEE9178C274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUViewControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
+		CEF2074A274F733A009C8FFC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CEF9C7CF276B99B0009C6BD5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		DE07BE2151029CE966456360 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE7A2FA62732AD60001E5F94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CED3D65427391FA7007AAB6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED3D66F27392114007AAB6F /* UUNavigationController.framework in Frameworks */,
+				2FBA71016AC0F8EC89411BAA /* Pods_Example_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE9174C274F3DE1009F5964 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA8DA7A63EC6E808DA883D7A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C59FF73AF1981A0378ABDF33 /* Pods-Example.debug.xcconfig */,
+				DE07BE2151029CE966456360 /* Pods-Example.release.xcconfig */,
+				287C5D918AE5FE0DDE4DC356 /* Pods-Example iOS.debug.xcconfig */,
+				3B4395EB4DB07A413DA37802 /* Pods-Example iOS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE7A2F9F2732AD60001E5F94 = {
+			isa = PBXGroup;
+			children = (
+				CE7A2FAB2732AD60001E5F94 /* UUNavigationController */,
+				CEE91750274F3DE1009F5964 /* UUNavigationController-tvOS */,
+				CED3D65827391FA7007AAB6F /* Example iOS */,
+				CE7A2FAA2732AD60001E5F94 /* Products */,
+				CE9169FF2733B31E00EF5CA7 /* Frameworks */,
+				AA8DA7A63EC6E808DA883D7A /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		CE7A2FAA2732AD60001E5F94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A2FA92732AD60001E5F94 /* UUNavigationController.framework */,
+				CEE9174F274F3DE1009F5964 /* UUNavigationController.framework */,
+				CED3D65727391FA7007AAB6F /* Example iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE7A2FAB2732AD60001E5F94 /* UUNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				CE7A2FD12732AF62001E5F94 /* UINavigationController+UU.h */,
+				CE7A2FC32732AD81001E5F94 /* UIViewController+UU.h */,
+				CE7A2FAC2732AD60001E5F94 /* UUNavigationController.h */,
+				CE7A2FCB2732ADD0001E5F94 /* UUNavigationController.m */,
+				CED3D682273A673A007AAB6F /* UUActionSheetAnimator.h */,
+				CED3D683273A673A007AAB6F /* UUActionSheetAnimator.m */,
+				CE5057E9273554B5002B2B46 /* UUAlertAnimator.h */,
+				CE5057EA273554B5002B2B46 /* UUAlertAnimator.m */,
+				CEC9911C273C06180058A112 /* UUPresentAnimator.h */,
+				CEC9911D273C06180058A112 /* UUPresentAnimator.m */,
+				CED3D67E27392AE9007AAB6F /* UUPushAnimator.h */,
+				CED3D67F27392AE9007AAB6F /* UUPushAnimator.m */,
+				CE9F9B8A274F8900000AA482 /* UUFadeAnimator.h */,
+				CE9F9B8B274F8900000AA482 /* UUFadeAnimator.m */,
+				CE7A2FDD2732B982001E5F94 /* UUTransparentBackgroundView.h */,
+				CE7A2FDE2732B982001E5F94 /* UUTransparentBackgroundView.m */,
+				CEE91789274F65A2009F5964 /* UUNavigationControllerDelegate.h */,
+				CEE9178C274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h */,
+				CE7A2FE82732BB31001E5F94 /* NSArray+UUPrivate.h */,
+				CE7A2FE72732BB31001E5F94 /* NSArray+UUPrivate.m */,
+				CE7A2FE52732BB31001E5F94 /* NSMutableArray+UUPrivate.h */,
+				CE7A2FE62732BB31001E5F94 /* NSMutableArray+UUPrivate.m */,
+				CE7A2FD52732B349001E5F94 /* NSObject+UUPrivate.h */,
+				CE7A2FD62732B349001E5F94 /* NSObject+UUPrivate.m */,
+				CE7A2FCD2732AF56001E5F94 /* UINavigationController+UUPrivate.h */,
+				CE7A2FD22732AF62001E5F94 /* UINavigationController+UUPrivate.m */,
+				CE7A2FC72732AD94001E5F94 /* UIViewController+UUPrivate.h */,
+				CE7A2FC82732AD94001E5F94 /* UIViewController+UUPrivate.m */,
+				CE5057D727343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.h */,
+				CE5057D627343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.m */,
+			);
+			path = UUNavigationController;
+			sourceTree = "<group>";
+		};
+		CE9169FF2733B31E00EF5CA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B32F96A6D4966BF466E80D24 /* Pods_Example.framework */,
+				7FF9F79904897D16152AC3A4 /* Pods_Example_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CED3D65827391FA7007AAB6F /* Example iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CED3D65927391FA7007AAB6F /* AppDelegate.swift */,
+				CED3D65B27391FA7007AAB6F /* SceneDelegate.swift */,
+				CED3D66B27392101007AAB6F /* AlertViewController.swift */,
+				CED3D686273A6E31007AAB6F /* ActionSheetViewController.swift */,
+				CED3D66C27392101007AAB6F /* RootViewController.swift */,
+				CED3D65D27391FA7007AAB6F /* ViewController.swift */,
+				CEF2074A274F733A009C8FFC /* Extensions.swift */,
+				CEF9C7CF276B99B0009C6BD5 /* SearchViewController.swift */,
+				CED3D65F27391FA7007AAB6F /* Main.storyboard */,
+				CED3D66227391FAA007AAB6F /* Assets.xcassets */,
+				CED3D66427391FAA007AAB6F /* LaunchScreen.storyboard */,
+				CED3D66727391FAA007AAB6F /* Info.plist */,
+			);
+			path = "Example iOS";
+			sourceTree = "<group>";
+		};
+		CEE91750274F3DE1009F5964 /* UUNavigationController-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				CEE91751274F3DE1009F5964 /* UUNavigationController_tvOS.h */,
+				CEE91752274F3DE1009F5964 /* UUNavigationController_tvOS.docc */,
+			);
+			path = "UUNavigationController-tvOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CE7A2FA42732AD60001E5F94 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE9178A274F65A2009F5964 /* UUNavigationControllerDelegate.h in Headers */,
+				CED3D68027392AE9007AAB6F /* UUPushAnimator.h in Headers */,
+				CE7A2FD72732B349001E5F94 /* NSObject+UUPrivate.h in Headers */,
+				CE7A2FE92732BB31001E5F94 /* NSMutableArray+UUPrivate.h in Headers */,
+				CE5057D927343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.h in Headers */,
+				CE9F9B8C274F8900000AA482 /* UUFadeAnimator.h in Headers */,
+				CE7A2FC52732AD81001E5F94 /* UIViewController+UU.h in Headers */,
+				CEC9911E273C06180058A112 /* UUPresentAnimator.h in Headers */,
+				CE7A2FDF2732B982001E5F94 /* UUTransparentBackgroundView.h in Headers */,
+				CE5057EB273554B5002B2B46 /* UUAlertAnimator.h in Headers */,
+				CE7A2FD32732AF62001E5F94 /* UINavigationController+UU.h in Headers */,
+				CE7A2FBA2732AD60001E5F94 /* UUNavigationController.h in Headers */,
+				CEE9178D274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h in Headers */,
+				CE7A2FCF2732AF56001E5F94 /* UINavigationController+UUPrivate.h in Headers */,
+				CE7A2FC92732AD94001E5F94 /* UIViewController+UUPrivate.h in Headers */,
+				CED3D684273A673A007AAB6F /* UUActionSheetAnimator.h in Headers */,
+				CE7A2FEC2732BB31001E5F94 /* NSArray+UUPrivate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE9174A274F3DE1009F5964 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE91777274F3E56009F5964 /* UUActionSheetAnimator.h in Headers */,
+				CEE9176E274F3E56009F5964 /* NSObject+UUPrivate.h in Headers */,
+				CEE91772274F3E56009F5964 /* UU__UIViewControllerOneToOneTransitionContext.h in Headers */,
+				CEE9176C274F3E55009F5964 /* UUPresentAnimator.h in Headers */,
+				CEE9177C274F3E56009F5964 /* UUTransparentBackgroundView.h in Headers */,
+				CEE91778274F3E56009F5964 /* UUAlertAnimator.h in Headers */,
+				CEE91767274F3E55009F5964 /* UUNavigationController.h in Headers */,
+				CEE9176A274F3E55009F5964 /* UIViewController+UU.h in Headers */,
+				CEE91776274F3E56009F5964 /* NSArray+UUPrivate.h in Headers */,
+				CEE91773274F3E56009F5964 /* UIViewController+UUPrivate.h in Headers */,
+				CEE9177B274F3E56009F5964 /* UUPushAnimator.h in Headers */,
+				CEE9177D274F3E56009F5964 /* UINavigationController+UU.h in Headers */,
+				CEE91769274F3E55009F5964 /* NSMutableArray+UUPrivate.h in Headers */,
+				CEE9176F274F3E56009F5964 /* UINavigationController+UUPrivate.h in Headers */,
+				CEE9178B274F65A2009F5964 /* UUNavigationControllerDelegate.h in Headers */,
+				CE9F9B8D274F8900000AA482 /* UUFadeAnimator.h in Headers */,
+				CEE9178E274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h in Headers */,
+				CEE9175F274F3DE2009F5964 /* UUNavigationController_tvOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CE7A2FA82732AD60001E5F94 /* UUNavigationController-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE7A2FBD2732AD60001E5F94 /* Build configuration list for PBXNativeTarget "UUNavigationController-iOS" */;
+			buildPhases = (
+				CE7A2FA42732AD60001E5F94 /* Headers */,
+				CE7A2FA52732AD60001E5F94 /* Sources */,
+				CE7A2FA62732AD60001E5F94 /* Frameworks */,
+				CE7A2FA72732AD60001E5F94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UUNavigationController-iOS";
+			productName = UUNavigationController;
+			productReference = CE7A2FA92732AD60001E5F94 /* UUNavigationController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CED3D65627391FA7007AAB6F /* Example iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CED3D66827391FAA007AAB6F /* Build configuration list for PBXNativeTarget "Example iOS" */;
+			buildPhases = (
+				1AD0911144ABF35FC3872675 /* [CP] Check Pods Manifest.lock */,
+				CED3D65327391FA7007AAB6F /* Sources */,
+				CED3D65427391FA7007AAB6F /* Frameworks */,
+				CED3D65527391FA7007AAB6F /* Resources */,
+				CED3D67327392114007AAB6F /* Embed Frameworks */,
+				45761AC4B41D574E54669E27 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CED3D67227392114007AAB6F /* PBXTargetDependency */,
+			);
+			name = "Example iOS";
+			productName = "Example iOS";
+			productReference = CED3D65727391FA7007AAB6F /* Example iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEE9174E274F3DE1009F5964 /* UUNavigationController-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEE91764274F3DE2009F5964 /* Build configuration list for PBXNativeTarget "UUNavigationController-tvOS" */;
+			buildPhases = (
+				CEE9174A274F3DE1009F5964 /* Headers */,
+				CEE9174B274F3DE1009F5964 /* Sources */,
+				CEE9174C274F3DE1009F5964 /* Frameworks */,
+				CEE9174D274F3DE1009F5964 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UUNavigationController-tvOS";
+			productName = "UUNavigationController-tvOS";
+			productReference = CEE9174F274F3DE1009F5964 /* UUNavigationController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE7A2FA02732AD60001E5F94 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					CE7A2FA82732AD60001E5F94 = {
+						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1310;
+					};
+					CED3D65627391FA7007AAB6F = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					CEE9174E274F3DE1009F5964 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = CE7A2FA32732AD60001E5F94 /* Build configuration list for PBXProject "UUNavigationController" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE7A2F9F2732AD60001E5F94;
+			productRefGroup = CE7A2FAA2732AD60001E5F94 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE7A2FA82732AD60001E5F94 /* UUNavigationController-iOS */,
+				CEE9174E274F3DE1009F5964 /* UUNavigationController-tvOS */,
+				CED3D65627391FA7007AAB6F /* Example iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE7A2FA72732AD60001E5F94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CED3D65527391FA7007AAB6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED3D66627391FAA007AAB6F /* LaunchScreen.storyboard in Resources */,
+				CED3D66327391FAA007AAB6F /* Assets.xcassets in Resources */,
+				CED3D66127391FA7007AAB6F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE9174D274F3DE1009F5964 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AD0911144ABF35FC3872675 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45761AC4B41D574E54669E27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example iOS/Pods-Example iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example iOS/Pods-Example iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example iOS/Pods-Example iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE7A2FA52732AD60001E5F94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE7A2FCA2732AD94001E5F94 /* UIViewController+UUPrivate.m in Sources */,
+				CE7A2FEB2732BB31001E5F94 /* NSArray+UUPrivate.m in Sources */,
+				CED3D685273A673A007AAB6F /* UUActionSheetAnimator.m in Sources */,
+				CE5057D827343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.m in Sources */,
+				CE7A2FD42732AF62001E5F94 /* UINavigationController+UUPrivate.m in Sources */,
+				CE7A2FEA2732BB31001E5F94 /* NSMutableArray+UUPrivate.m in Sources */,
+				CEC9911F273C06180058A112 /* UUPresentAnimator.m in Sources */,
+				CE9F9B8E274F8900000AA482 /* UUFadeAnimator.m in Sources */,
+				CE7A2FE02732B982001E5F94 /* UUTransparentBackgroundView.m in Sources */,
+				CED3D68127392AE9007AAB6F /* UUPushAnimator.m in Sources */,
+				CE5057EC273554B5002B2B46 /* UUAlertAnimator.m in Sources */,
+				CE7A2FD82732B349001E5F94 /* NSObject+UUPrivate.m in Sources */,
+				CE7A2FCC2732ADD0001E5F94 /* UUNavigationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CED3D65327391FA7007AAB6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED3D687273A6E31007AAB6F /* ActionSheetViewController.swift in Sources */,
+				CED3D66E27392102007AAB6F /* RootViewController.swift in Sources */,
+				CEF9C7D0276B99B0009C6BD5 /* SearchViewController.swift in Sources */,
+				CED3D65E27391FA7007AAB6F /* ViewController.swift in Sources */,
+				CED3D65A27391FA7007AAB6F /* AppDelegate.swift in Sources */,
+				CED3D65C27391FA7007AAB6F /* SceneDelegate.swift in Sources */,
+				CEF2074B274F733A009C8FFC /* Extensions.swift in Sources */,
+				CED3D66D27392102007AAB6F /* AlertViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE9174B274F3DE1009F5964 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEE91775274F3E56009F5964 /* UIViewController+UUPrivate.m in Sources */,
+				CEE91774274F3E56009F5964 /* UUPushAnimator.m in Sources */,
+				CEE9177A274F3E56009F5964 /* UU__UIViewControllerOneToOneTransitionContext.m in Sources */,
+				CE9F9B8F274F8900000AA482 /* UUFadeAnimator.m in Sources */,
+				CEE91771274F3E56009F5964 /* NSObject+UUPrivate.m in Sources */,
+				CEE91780274F3E56009F5964 /* NSArray+UUPrivate.m in Sources */,
+				CEE91770274F3E56009F5964 /* UINavigationController+UUPrivate.m in Sources */,
+				CEE91781274F3E56009F5964 /* NSMutableArray+UUPrivate.m in Sources */,
+				CEE9176D274F3E56009F5964 /* UUActionSheetAnimator.m in Sources */,
+				CEE9176B274F3E55009F5964 /* UUAlertAnimator.m in Sources */,
+				CEE91782274F3E56009F5964 /* UUNavigationController.m in Sources */,
+				CEE91779274F3E56009F5964 /* UUTransparentBackgroundView.m in Sources */,
+				CEE91753274F3DE2009F5964 /* UUNavigationController_tvOS.docc in Sources */,
+				CEE91768274F3E55009F5964 /* UUPresentAnimator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CED3D67227392114007AAB6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE7A2FA82732AD60001E5F94 /* UUNavigationController-iOS */;
+			targetProxy = CED3D67127392114007AAB6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CED3D65F27391FA7007AAB6F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CED3D66027391FA7007AAB6F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CED3D66427391FAA007AAB6F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CED3D66527391FAA007AAB6F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE7A2FBB2732AD60001E5F94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CE7A2FBC2732AD60001E5F94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CE7A2FBE2732AD60001E5F94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neutronstarer.uunavigationcontroller;
+				PRODUCT_NAME = UUNavigationController;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE7A2FBF2732AD60001E5F94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neutronstarer.uunavigationcontroller;
+				PRODUCT_NAME = UUNavigationController;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CED3D66927391FAA007AAB6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 287C5D918AE5FE0DDE4DC356 /* Pods-Example iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N4WZ33Z6KM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Example iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neutronstarer.uunavigationcontroller.example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CED3D66A27391FAA007AAB6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B4395EB4DB07A413DA37802 /* Pods-Example iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N4WZ33Z6KM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Example iOS/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neutronstarer.uunavigationcontroller.example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEE91760274F3DE2009F5964 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N4WZ33Z6KM;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neutronstarer.uunavigationcontroller;
+				PRODUCT_NAME = UUNavigationController;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		CEE91761274F3DE2009F5964 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = N4WZ33Z6KM;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neutronstarer.uunavigationcontroller;
+				PRODUCT_NAME = UUNavigationController;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE7A2FA32732AD60001E5F94 /* Build configuration list for PBXProject "UUNavigationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7A2FBB2732AD60001E5F94 /* Debug */,
+				CE7A2FBC2732AD60001E5F94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE7A2FBD2732AD60001E5F94 /* Build configuration list for PBXNativeTarget "UUNavigationController-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE7A2FBE2732AD60001E5F94 /* Debug */,
+				CE7A2FBF2732AD60001E5F94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CED3D66827391FAA007AAB6F /* Build configuration list for PBXNativeTarget "Example iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CED3D66927391FAA007AAB6F /* Debug */,
+				CED3D66A27391FAA007AAB6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEE91764274F3DE2009F5964 /* Build configuration list for PBXNativeTarget "UUNavigationController-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEE91760274F3DE2009F5964 /* Debug */,
+				CEE91761274F3DE2009F5964 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE7A2FA02732AD60001E5F94 /* Project object */;
+}
