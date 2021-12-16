@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UUTransparentBackgroundView : UIView
 
-@property (nonatomic, copy) void(^tapHandle)(void);
+@property (nonatomic, copy, nullable) void(^tapHandle)(void);
 
 @end
 
