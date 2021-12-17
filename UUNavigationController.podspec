@@ -91,10 +91,10 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "UUNavigationController/*.{h,m}"
+  spec.source_files  = "UUNavigationController/"
   # spec.exclude_files = "Classes/Exclude"
 
-  spec.public_header_files = "UUNavigationController/UINavigationController+UU.h", "UUNavigationController/UIViewController+UU.h", "UUNavigationController/UUPushAnimator.h", "UUNavigationController/UUAlertAnimator.h", "UUNavigationController/UUActionSheetAnimator.h", "UUNavigationController/UUTransparentBackgroundView.h", "UUNavigationController/UUPresentAnimator.h", "UUNavigationController/UUFadeAnimator.h", "UUNavigationController/UUNavigationControllerDelegate.h", "UUNavigationController/UUViewControllerAnimatedTransitioning.h", 
+  spec.public_header_files = "UUNavigationController/UUNavigationController.h", "UUNavigationController/UINavigationController+UU.h", "UUNavigationController/UIViewController+UU.h", "UUNavigationController/UUPushAnimator.h", "UUNavigationController/UUAlertAnimator.h", "UUNavigationController/UUActionSheetAnimator.h", "UUNavigationController/UUTransparentBackgroundView.h", "UUNavigationController/UUPresentAnimator.h", "UUNavigationController/UUFadeAnimator.h", "UUNavigationController/UUNavigationControllerDelegate.h", "UUNavigationController/UUViewControllerAnimatedTransitioning.h", 
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
