@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "UUNavigationController"
-  spec.version      = "1.0.1"
-  spec.summary      = "Another implementation of UINavigationController"
+  spec.version      = "1.0.2"
+  spec.summary      = "Substitute of UINavigationController."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-  Another implementation of UINavigationController.
+  Substitute of UINavigationController.
                    DESC
 
   spec.homepage     = "https://github.com/neutronstarer/UUNavigationController"
@@ -94,7 +94,7 @@ Pod::Spec.new do |spec|
   spec.source_files  = "UUNavigationController/"
   # spec.exclude_files = "Classes/Exclude"
 
-  spec.public_header_files = "UUNavigationController/UUNavigationController.h", "UUNavigationController/UINavigationController+UU.h", "UUNavigationController/UIViewController+UU.h", "UUNavigationController/UUPushAnimator.h", "UUNavigationController/UUAlertAnimator.h", "UUNavigationController/UUActionSheetAnimator.h", "UUNavigationController/UUTransparentBackgroundView.h", "UUNavigationController/UUPresentAnimator.h", "UUNavigationController/UUFadeAnimator.h", "UUNavigationController/UUNavigationControllerDelegate.h", "UUNavigationController/UUViewControllerAnimatedTransitioning.h", 
+  spec.public_header_files = "UUNavigationController/UUNavigationController.h", "UUNavigationController/UUNavigationController+UU.h" ,"UUNavigationController/UINavigationController+UU.h", "UUNavigationController/UIViewController+UU.h", "UUNavigationController/UUPushAnimator.h", "UUNavigationController/UUAlertAnimator.h", "UUNavigationController/UUActionSheetAnimator.h", "UUNavigationController/UUTransparentBackgroundView.h", "UUNavigationController/UUPresentAnimator.h", "UUNavigationController/UUFadeAnimator.h", "UUNavigationController/UUNavigationControllerDelegate.h", "UUNavigationController/UUViewControllerAnimatedTransitioning.h", 
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

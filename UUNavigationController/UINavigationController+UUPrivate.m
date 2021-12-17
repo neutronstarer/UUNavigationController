@@ -10,7 +10,7 @@
 #import "NSObject+UUPrivate.h"
 #import "UINavigationController+UUPrivate.h"
 #import "UIViewController+UUPrivate.h"
-#import "UUNavigationController.h"
+#import "UUNavigationController+UU.h"
 
 @implementation UINavigationController (UUPrivate)
 

@@ -8,7 +8,7 @@
 #import <objc/runtime.h>
 
 #import "UIViewController+UUPrivate.h"
-#import "UUNavigationController.h"
+#import "UUNavigationController+UU.h"
 
 @implementation UIViewController (UUPrivate)
 

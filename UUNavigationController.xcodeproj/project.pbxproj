@@ -32,6 +32,8 @@
 		CE9F9B8D274F8900000AA482 /* UUFadeAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CE9F9B8A274F8900000AA482 /* UUFadeAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CE9F9B8E274F8900000AA482 /* UUFadeAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9F9B8B274F8900000AA482 /* UUFadeAnimator.m */; };
 		CE9F9B8F274F8900000AA482 /* UUFadeAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9F9B8B274F8900000AA482 /* UUFadeAnimator.m */; };
+		CEA11FE5276D0C2A006754E5 /* UUNavigationController+UU.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA11FE4276D0C2A006754E5 /* UUNavigationController+UU.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEA11FE6276D0C2A006754E5 /* UUNavigationController+UU.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA11FE4276D0C2A006754E5 /* UUNavigationController+UU.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEC9911E273C06180058A112 /* UUPresentAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CEC9911C273C06180058A112 /* UUPresentAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEC9911F273C06180058A112 /* UUPresentAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9911D273C06180058A112 /* UUPresentAnimator.m */; };
 		CED3D65A27391FA7007AAB6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3D65927391FA7007AAB6F /* AppDelegate.swift */; };
@@ -49,8 +51,6 @@
 		CED3D684273A673A007AAB6F /* UUActionSheetAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CED3D682273A673A007AAB6F /* UUActionSheetAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CED3D685273A673A007AAB6F /* UUActionSheetAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CED3D683273A673A007AAB6F /* UUActionSheetAnimator.m */; };
 		CED3D687273A6E31007AAB6F /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3D686273A6E31007AAB6F /* ActionSheetViewController.swift */; };
-		CEE91753274F3DE2009F5964 /* UUNavigationController_tvOS.docc in Sources */ = {isa = PBXBuildFile; fileRef = CEE91752274F3DE1009F5964 /* UUNavigationController_tvOS.docc */; };
-		CEE9175F274F3DE2009F5964 /* UUNavigationController_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE91751274F3DE1009F5964 /* UUNavigationController_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEE91767274F3E55009F5964 /* UUNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FAC2732AD60001E5F94 /* UUNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEE91768274F3E55009F5964 /* UUPresentAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9911D273C06180058A112 /* UUPresentAnimator.m */; };
 		CEE91769274F3E55009F5964 /* NSMutableArray+UUPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CE7A2FE52732BB31001E5F94 /* NSMutableArray+UUPrivate.h */; };
@@ -138,6 +138,7 @@
 		CE7A2FE82732BB31001E5F94 /* NSArray+UUPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+UUPrivate.h"; sourceTree = "<group>"; };
 		CE9F9B8A274F8900000AA482 /* UUFadeAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUFadeAnimator.h; sourceTree = "<group>"; };
 		CE9F9B8B274F8900000AA482 /* UUFadeAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUFadeAnimator.m; sourceTree = "<group>"; };
+		CEA11FE4276D0C2A006754E5 /* UUNavigationController+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UUNavigationController+UU.h"; sourceTree = "<group>"; };
 		CEC9911C273C06180058A112 /* UUPresentAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUPresentAnimator.h; sourceTree = "<group>"; };
 		CEC9911D273C06180058A112 /* UUPresentAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUPresentAnimator.m; sourceTree = "<group>"; };
 		CED3D65727391FA7007AAB6F /* Example iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,8 +157,6 @@
 		CED3D683273A673A007AAB6F /* UUActionSheetAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUActionSheetAnimator.m; sourceTree = "<group>"; };
 		CED3D686273A6E31007AAB6F /* ActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
 		CEE9174F274F3DE1009F5964 /* UUNavigationController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UUNavigationController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEE91751274F3DE1009F5964 /* UUNavigationController_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNavigationController_tvOS.h; sourceTree = "<group>"; };
-		CEE91752274F3DE1009F5964 /* UUNavigationController_tvOS.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = UUNavigationController_tvOS.docc; sourceTree = "<group>"; };
 		CEE91789274F65A2009F5964 /* UUNavigationControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNavigationControllerDelegate.h; sourceTree = "<group>"; };
 		CEE9178C274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUViewControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
 		CEF2074A274F733A009C8FFC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -207,7 +206,6 @@
 			isa = PBXGroup;
 			children = (
 				CE7A2FAB2732AD60001E5F94 /* UUNavigationController */,
-				CEE91750274F3DE1009F5964 /* UUNavigationController-tvOS */,
 				CED3D65827391FA7007AAB6F /* Example iOS */,
 				CE7A2FAA2732AD60001E5F94 /* Products */,
 				CE9169FF2733B31E00EF5CA7 /* Frameworks */,
@@ -232,6 +230,7 @@
 				CE7A2FC32732AD81001E5F94 /* UIViewController+UU.h */,
 				CE7A2FAC2732AD60001E5F94 /* UUNavigationController.h */,
 				CE7A2FCB2732ADD0001E5F94 /* UUNavigationController.m */,
+				CEA11FE4276D0C2A006754E5 /* UUNavigationController+UU.h */,
 				CED3D682273A673A007AAB6F /* UUActionSheetAnimator.h */,
 				CED3D683273A673A007AAB6F /* UUActionSheetAnimator.m */,
 				CE5057E9273554B5002B2B46 /* UUAlertAnimator.h */,
@@ -290,15 +289,6 @@
 			path = "Example iOS";
 			sourceTree = "<group>";
 		};
-		CEE91750274F3DE1009F5964 /* UUNavigationController-tvOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEE91751274F3DE1009F5964 /* UUNavigationController_tvOS.h */,
-				CEE91752274F3DE1009F5964 /* UUNavigationController_tvOS.docc */,
-			);
-			path = "UUNavigationController-tvOS";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -311,6 +301,7 @@
 				CE7A2FD72732B349001E5F94 /* NSObject+UUPrivate.h in Headers */,
 				CE7A2FE92732BB31001E5F94 /* NSMutableArray+UUPrivate.h in Headers */,
 				CE5057D927343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.h in Headers */,
+				CEA11FE5276D0C2A006754E5 /* UUNavigationController+UU.h in Headers */,
 				CE9F9B8C274F8900000AA482 /* UUFadeAnimator.h in Headers */,
 				CE7A2FC52732AD81001E5F94 /* UIViewController+UU.h in Headers */,
 				CEC9911E273C06180058A112 /* UUPresentAnimator.h in Headers */,
@@ -335,6 +326,7 @@
 				CEE91772274F3E56009F5964 /* UU__UIViewControllerOneToOneTransitionContext.h in Headers */,
 				CEE9176C274F3E55009F5964 /* UUPresentAnimator.h in Headers */,
 				CEE9177C274F3E56009F5964 /* UUTransparentBackgroundView.h in Headers */,
+				CEA11FE6276D0C2A006754E5 /* UUNavigationController+UU.h in Headers */,
 				CEE91778274F3E56009F5964 /* UUAlertAnimator.h in Headers */,
 				CEE91767274F3E55009F5964 /* UUNavigationController.h in Headers */,
 				CEE9176A274F3E55009F5964 /* UIViewController+UU.h in Headers */,
@@ -347,7 +339,6 @@
 				CEE9178B274F65A2009F5964 /* UUNavigationControllerDelegate.h in Headers */,
 				CE9F9B8D274F8900000AA482 /* UUFadeAnimator.h in Headers */,
 				CEE9178E274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h in Headers */,
-				CEE9175F274F3DE2009F5964 /* UUNavigationController_tvOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,7 +565,6 @@
 				CEE9176B274F3E55009F5964 /* UUAlertAnimator.m in Sources */,
 				CEE91782274F3E56009F5964 /* UUNavigationController.m in Sources */,
 				CEE91779274F3E56009F5964 /* UUTransparentBackgroundView.m in Sources */,
-				CEE91753274F3DE2009F5964 /* UUNavigationController_tvOS.docc in Sources */,
 				CEE91768274F3E55009F5964 /* UUPresentAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -733,7 +723,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -747,7 +737,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.neutronstarer.uunavigationcontroller;
 				PRODUCT_NAME = UUNavigationController;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -765,7 +755,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -779,7 +769,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.neutronstarer.uunavigationcontroller;
 				PRODUCT_NAME = UUNavigationController;
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -859,7 +849,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = N4WZ33Z6KM;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -873,7 +863,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.neutronstarer.uunavigationcontroller;
 				PRODUCT_NAME = UUNavigationController;
 				SDKROOT = appletvos;
@@ -888,7 +878,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = N4WZ33Z6KM;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -902,7 +892,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.neutronstarer.uunavigationcontroller;
 				PRODUCT_NAME = UUNavigationController;
 				SDKROOT = appletvos;

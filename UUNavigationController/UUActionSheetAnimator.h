@@ -5,9 +5,7 @@
 //  Created by neutronstarer on 2021/11/9.
 //
 
-@import UIKit;
-
-#import <UUNavigationController/UUViewControllerAnimatedTransitioning.h>
+#import "UUViewControllerAnimatedTransitioning.h"
 
 NS_ASSUME_NONNULL_BEGIN
 /// Action sheet style

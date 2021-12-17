@@ -5,9 +5,7 @@
 //  Created by neutronstarer on 2021/11/5.
 //
 
-@import UIKit;
-
-#import <UUNavigationController/UUViewControllerAnimatedTransitioning.h>
+#import "UUViewControllerAnimatedTransitioning.h"
 
 NS_ASSUME_NONNULL_BEGIN
 /// Alert style

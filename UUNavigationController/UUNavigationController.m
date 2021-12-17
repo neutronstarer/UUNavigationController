@@ -13,8 +13,10 @@
 #import "NSObject+UUPrivate.h"
 #import "UINavigationController+UUPrivate.h"
 #import "UIViewController+UUPrivate.h"
-#import "UUNavigationController.h"
+#import "UUNavigationControllerDelegate.h"
+#import "UUNavigationController+UU.h"
 #import "UUPushAnimator.h"
+#import "UUViewControllerAnimatedTransitioning.h"
 #import "UU__UIViewControllerOneToOneTransitionContext.h"
 
 static inline void Main(void(^block)(void)){
