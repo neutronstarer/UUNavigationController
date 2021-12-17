@@ -15,8 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign          ) BOOL             uu_backItemVisible;
 @property (nonatomic, strong, nullable) UIViewController *uu_viewController;
 
-- (void)uu_setViewControllers:(NSArray<__kindof UIViewController *> *)viewControllers;
-
 @end
 
 NS_ASSUME_NONNULL_END
