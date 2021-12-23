@@ -4,6 +4,7 @@
 //
 //  Created by neutronstarer on 2021/11/3.
 //
+@import Foundation;
 //! Project version number for UUNavigationController.
 FOUNDATION_EXPORT double UUNavigationControllerVersionNumber;
 
