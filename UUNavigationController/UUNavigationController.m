@@ -148,10 +148,10 @@ static inline void Main(void(^block)(void)){
                     UINavigationController  *v;
                     if (self.coder){
                         v = [[self.navigationControllerClass alloc] initWithCoder:self.coder];
-                    }else if (self.nibBundleOrNil && self.nibNameOrNil){
-                        v = [[self.navigationControllerClass alloc] initWithNavigationBarClass:self.navigationBarClass toolbarClass:self.toolBarClass];
-                    }else{
+                    }else if (self.nibBundleOrNil || self.nibNameOrNil){
                         v = [[self.navigationControllerClass alloc] initWithNibName:self.nibNameOrNil bundle:self.nibBundleOrNil];
+                    }else{
+                        v = [[self.navigationControllerClass alloc] initWithNavigationBarClass:self.navigationBarClass toolbarClass:self.toolBarClass];
                     }
                     v.uu_navigationController = self;
                     v.uu_viewController = obj;
@@ -303,10 +303,12 @@ static inline void Main(void(^block)(void)){
         v;
     });
     
+    animated = estimatedOperation == UINavigationControllerOperationNone ? NO : animated;
+    
     NSArray<UINavigationController*> *willPopNavigationControllers = [oldNavigationControllers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"NOT (SELF IN %@)", newNavigationControllers]];
     
     NSMutableArray *sortedNavigationController = ({
-        NSMutableArray *v = [NSMutableArray arrayWithCapacity:oldNavigationControllers.count+newNavigationControllers.count];
+        NSMutableArray *v = [NSMutableArray arrayWithCapacity:oldNavigationControllers.count + newNavigationControllers.count];
         [v addObjectsFromArray:newNavigationControllers];
         [willPopNavigationControllers enumerateObjectsUsingBlock:^(UINavigationController *obj, NSUInteger idx, BOOL *stop) {
             NSInteger index = [oldNavigationControllers indexOfObject:obj];
@@ -408,6 +410,7 @@ static inline void Main(void(^block)(void)){
     };
     BOOL isPop = estimatedOperation == UINavigationControllerOperationPop;
     BOOL nextIsTransparentAndVisble = YES;
+    NSNumber *completionCurve;
     UIView *selfView = ({
         __block UIView *v = nil;
         Main(^{
@@ -564,14 +567,14 @@ static inline void Main(void(^block)(void)){
         } reversed:isPop];
         
         [animators addObject:animator];
-        UU__UIViewControllerOneToOneTransitionContext *context = [[NSClassFromString(@"_UIViewControllerOneToOneTransitionContext") alloc] init];
+        UU__UIViewControllerOneToOneTransitionContext *context = [[NSClassFromString([NSString stringWithFormat:@"_UIViewControllerOne%@", @"ToOneTransitionContext"]) alloc] init];
         [context uu__setContainerView:selfView];
         [context uu__setIsAnimated:isAnimated];
         [context uu__setFromViewController:fromViewController];
         [context uu__setToViewController:toViewController];
         [context uu__setAnimator:animator];
         [context uu__setAllowUserInteraction:false];
-        [context uu__setCompletionCurve:7];
+        [context uu__setCompletionCurve:completionCurve ? completionCurve.longLongValue: 7];
         [context uu__setState:1];
         [context uu__setTransitionIsInFlight:true];
         [context uu__setDuration:[animator transitionDuration:(id<UIViewControllerContextTransitioning>)context]];
@@ -593,6 +596,10 @@ static inline void Main(void(^block)(void)){
                 }
             });
             interactor = self.interactor;
+            if (interactor){
+                completionCurve = @(interactor.completionCurve);
+            }
+            [context uu__setCompletionCurve:completionCurve ? completionCurve.longLongValue: 7];
             [context setUu_willCancel:^{
                 willCancel();
             }];
@@ -637,6 +644,7 @@ static inline void Main(void(^block)(void)){
     });
 }
 
+
 - (void)uu_addChildViewController:(UIViewController *)childController{
     NSAssert(0, @"Do not call this method directly");
     return;
@@ -668,19 +676,12 @@ static inline void Main(void(^block)(void)){
     UIView *view = gestureRecognizer.view;
     UIView *superview=view.superview;
     CGPoint point=[gestureRecognizer locationInView:superview];
-    UIPercentDrivenInteractiveTransition *interactor = self.interactor;
     switch (gestureRecognizer.state) {
         case UIGestureRecognizerStateBegan:{
             if (self.navigationControllers.count<2){
                 break;
             }
-            //            if (!self.viewControllers.lastObject.uu.interactivePopGestureRecognizerEnabled){
-            //                break;
-            //            }
-            if (!interactor){
-                interactor = [[UIPercentDrivenInteractiveTransition alloc] init];
-                self.interactor = interactor;
-            }
+            self.interactor = [[UIPercentDrivenInteractiveTransition alloc] init];
             if (![self popViewControllerAnimated:YES completion:nil]){
                 break;
             }
@@ -688,18 +689,18 @@ static inline void Main(void(^block)(void)){
         }
             break;
         case UIGestureRecognizerStateChanged:
-            [interactor updateInteractiveTransition:(point.x-_interactorStartPoint.x)/CGRectGetWidth(view.bounds)];
+            [self.interactor updateInteractiveTransition:(point.x-_interactorStartPoint.x)/CGRectGetWidth(view.bounds)];
             break;
         case UIGestureRecognizerStateEnded:
         case UIGestureRecognizerStateCancelled:{
             CGPoint velocity=[(UIPanGestureRecognizer*)gestureRecognizer velocityInView:superview];
             CGFloat width = CGRectGetWidth(view.bounds);
             if (velocity.x>1000){
-                [interactor finishInteractiveTransition];
+                [self.interactor finishInteractiveTransition];
             }else if (point.x-_interactorStartPoint.x>width/4.0){
-                [interactor finishInteractiveTransition];
+                [self.interactor finishInteractiveTransition];
             } else {
-                [interactor cancelInteractiveTransition];
+                [self.interactor cancelInteractiveTransition];
             }
         }break;
         default: break;
