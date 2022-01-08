@@ -23,7 +23,11 @@
 }
 
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext{
+#if TARGET_OS_IOS
+    return UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation)? 0.25: UINavigationControllerHideShowBarDuration;
+#else
     return UINavigationControllerHideShowBarDuration;
+#endif
 }
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
