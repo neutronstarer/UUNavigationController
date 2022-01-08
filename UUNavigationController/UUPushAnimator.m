@@ -24,7 +24,15 @@
 
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext{
 #if TARGET_OS_IOS
-    return UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation)? 0.25: UINavigationControllerHideShowBarDuration;
+    __block NSTimeInterval duration = 0;
+    if ([NSThread isMainThread]){
+        duration = UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation)? 0.25: UINavigationControllerHideShowBarDuration;
+    }else{
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            duration = UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation)? 0.25: UINavigationControllerHideShowBarDuration;
+        });
+    }
+    return duration;
 #else
     return UINavigationControllerHideShowBarDuration;
 #endif

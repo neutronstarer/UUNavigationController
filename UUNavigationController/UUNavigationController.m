@@ -302,9 +302,7 @@ static inline void Main(void(^block)(void)){
         }
         v;
     });
-    
-    animated = estimatedOperation == UINavigationControllerOperationNone ? NO : animated;
-    
+        
     NSArray<UINavigationController*> *willPopNavigationControllers = [oldNavigationControllers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"NOT (SELF IN %@)", newNavigationControllers]];
     
     NSMutableArray *sortedNavigationController = ({

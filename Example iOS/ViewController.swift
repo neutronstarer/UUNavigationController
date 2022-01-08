@@ -242,7 +242,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func nextTitle(seq: Int) -> String {
-        return String((Int(self.title ?? "0") ?? 0) + seq, radix: 10)
+        return String((Int(self.uu_navigationController?.viewControllers.last?.title ?? "0") ?? 0) + seq, radix: 10)
     }
     /*
      // MARK: - Navigation
