@@ -38,7 +38,6 @@
             [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
             return;
         }
-        toView.layer.transform       = CATransform3DScale(CATransform3DIdentity, 0.985, 0.985, 0.985);
         UIView *backgroundView       = [fromView uu_addTransparentBackgroundView];
         backgroundView.alpha         = 0.5;
         [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0 options:UIViewAnimationOptionCurveLinear|UIViewAnimationOptionBeginFromCurrentState animations:^{
