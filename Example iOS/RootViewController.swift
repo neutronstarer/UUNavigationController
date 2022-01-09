@@ -14,6 +14,7 @@ class RootViewController: UUNavigationController, UINavigationControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
+        self.heroEnabled = true
         // Do any additional setup after loading the view.
     }
     

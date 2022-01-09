@@ -13,7 +13,9 @@
 
 + (void)uu_swizzleOriginalSelector:(SEL)originalSelector alteredSelector:(SEL)alteredSelector{
     Method originalMethod = class_getInstanceMethod(self, originalSelector);
+    Method alteredMethod = class_getInstanceMethod(self, alteredSelector);
     class_addMethod(self, originalSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+    class_addMethod(self, alteredSelector, method_getImplementation(alteredMethod), method_getTypeEncoding(alteredMethod));
     method_exchangeImplementations(class_getInstanceMethod(self, originalSelector), class_getInstanceMethod(self, alteredSelector));
 }
 

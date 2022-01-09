@@ -28,6 +28,7 @@ class SearchViewController: UIViewController {
            let v = UITextField()
             v.backgroundColor = UIColor.green
             v.text = "Keyword"
+            v.uu_heroId = "search"
             return v
         }()
         view.addSubview(textField)

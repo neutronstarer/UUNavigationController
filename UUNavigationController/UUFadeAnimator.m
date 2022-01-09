@@ -6,6 +6,7 @@
 //
 
 #import "UUFadeAnimator.h"
+#import "UUTransparentBackgroundView.h"
 
 @interface UUFadeAnimator()
 
@@ -22,7 +23,8 @@
 }
 
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext{
-    return UINavigationControllerHideShowBarDuration;
+//    return UINavigationControllerHideShowBarDuration;
+    return 2;
 }
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
@@ -31,7 +33,6 @@
     UIView *containerView      = [transitionContext containerView];
     if (self.operation == UINavigationControllerOperationPop){
         if (!transitionContext.isAnimated){
-            fromView.alpha = 0;
             [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
             return;
         }
@@ -46,7 +47,7 @@
     toView.frame               = containerView.bounds;
     toView.autoresizingMask    = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
     if (!transitionContext.isAnimated){
-        toView.alpha   = 1;
+        toView.alpha = 1;
         [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
         return;
     }

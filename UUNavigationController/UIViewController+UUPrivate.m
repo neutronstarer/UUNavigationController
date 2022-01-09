@@ -13,18 +13,19 @@
 @implementation UIViewController (UUPrivate)
 
 - (UUNavigationController *)uu_navigationController{
-    if ([self isKindOfClass:UINavigationController.class]) {
-        return [objc_getAssociatedObject(self, @selector(uu_navigationController)) anyObject];
+    UIViewController *parentViewController = self.parentViewController;
+    UIViewController *navigationController = self.navigationController;
+    UIViewController *tabBarController = self.tabBarController;
+    if ([parentViewController isKindOfClass:UUNavigationController.class]){
+        return (UUNavigationController*)parentViewController;
     }
-    return [self.navigationController uu_navigationController];
-}
-
-- (void)setUu_navigationController:(UUNavigationController *)uu_navigationController{
-    objc_setAssociatedObject(self, @selector(uu_navigationController), uu_navigationController ? ({
-        NSHashTable *v = [NSHashTable weakObjectsHashTable];
-        [v addObject:uu_navigationController];
-        v;
-    }): nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    if (navigationController){
+        return navigationController.uu_navigationController;
+    }
+    if (tabBarController){
+        return tabBarController.uu_navigationController;
+    }
+    return parentViewController.uu_navigationController;
 }
 
 @end

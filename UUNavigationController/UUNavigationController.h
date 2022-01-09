@@ -21,6 +21,7 @@ FOUNDATION_EXPORT const unsigned char UUNavigationControllerVersionString[];
 #import <UUNavigationController/UINavigationController+UU.h>
 #import <UUNavigationController/UUPresentAnimator.h>
 #import <UUNavigationController/UUFadeAnimator.h>
-#import <UUNavigationController/UUNavigationControllerDelegate.h>
+#import <UUNavigationController/UUCurtainAnimator.h>
 #import <UUNavigationController/UUNavigationController+UU.h>
 #import <UUNavigationController/UUViewControllerAnimatedTransitioning.h>
+#import <UUNavigationController/UIView+UU.h>

@@ -44,7 +44,7 @@ class CellModel: NSObject {
 }
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UITextFieldDelegate {
-    
+   
     lazy var tableView = {()->UITableView in
         let v = UITableView(frame: .zero, style: .plain)
         v.register(Cell.self, forCellReuseIdentifier: "Cell")
@@ -58,6 +58,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             v.backgroundColor = UIColor.green
             v.text = "Search"
             v.delegate = self
+            v.uu_heroId = "search"
             return v
         }()
         return v
@@ -108,7 +109,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if title == nil || title?.count == 0{
+        if title == nil || title?.count == 0 {
            title = "0"
         }
         view.backgroundColor = UIColor.white
@@ -192,7 +193,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             return v
         }())
-        
+        cellModels.append({()->CellModel in
+            let v = CellModel()
+            v.title = "push:curtain+"
+            v.action = {[weak self] ()->() in
+                self?.navigationController?.pushViewController({[weak self]()->ViewController in
+                    let v = ViewController()
+                    v.animatorMaker = {operation in
+                        return UUCurtainAnimator(operation: operation)
+                    }
+                    v.title = self?.nextTitle(seq: 1)
+                    return v
+                }(), animated: true)
+            }
+            return v
+        }())
+        cellModels.append({()->CellModel in
+            let v = CellModel()
+            v.title = "set:curtain+"
+            v.action = {[weak self] ()->() in
+                self?.navigationController?.setViewControllers([{()->ViewController in
+                    let v = ViewController()
+                    v.animatorMaker = {operation in
+                        return UUCurtainAnimator(operation: operation)
+                    }
+                    v.title = "0"
+                    return v
+                }()], animated: true)
+            }
+            return v
+        }())
         cellModels.append({()->CellModel in
             let v = CellModel()
             v.title = "push:push+/present+"

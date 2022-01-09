@@ -8,7 +8,7 @@
 @import UIKit;
 
 NS_ASSUME_NONNULL_BEGIN
-/// Present style
+// Present style.
 @interface UUPresentAnimator : NSObject<UIViewControllerAnimatedTransitioning>
 
 + (instancetype)animatorWithOperation:(UINavigationControllerOperation)operation;

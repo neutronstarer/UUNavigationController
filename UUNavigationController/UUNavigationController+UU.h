@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 NS_SWIFT_UI_ACTOR
 @interface UUNavigationController: UINavigationController
 
+@property (nonatomic, assign) BOOL heroEnabled;
+
 - (instancetype)initWithNavigationControllerClass:(nullable Class)navigationControllerClass NS_SWIFT_NAME(init(navigationControllerClass:));
 
 - (void)setViewControllers:(NSArray<UIViewController *> *)viewControllers NS_SWIFT_NAME(setViewController(_:));

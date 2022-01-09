@@ -13,11 +13,11 @@
 #import "NSObject+UUPrivate.h"
 #import "UINavigationController+UUPrivate.h"
 #import "UIViewController+UUPrivate.h"
-#import "UUNavigationControllerDelegate.h"
 #import "UUNavigationController+UU.h"
 #import "UUPushAnimator.h"
 #import "UUViewControllerAnimatedTransitioning.h"
 #import "UU__UIViewControllerOneToOneTransitionContext.h"
+#import "UUHeroAnimator.h"
 
 static inline void Main(void(^block)(void)){
     if (pthread_main_np()){
@@ -32,24 +32,24 @@ static inline void Main(void(^block)(void)){
 @interface UUNavigationController ()
 {
     CGPoint _interactorStartPoint;
+    NSString *_nibNameOrNil;
+    NSBundle *_nibBundleOrNil;
+    NSCoder *_coder;
+    NSArray *_viewWillAppearAppearances;
+    NSArray *_viewWillDisappearAppearances;
 }
+
 @property (nonatomic, strong) NSArray <UINavigationController*>    *navigationControllers;
 
-@property (nonatomic, copy  ) NSString                             *nibNameOrNil;
-@property (nonatomic, strong) NSBundle                             *nibBundleOrNil;
 @property (nonatomic, assign) Class                                navigationControllerClass;
 @property (nonatomic, assign) Class                                navigationBarClass;
 @property (nonatomic, assign) Class                                toolBarClass;
-@property (nonatomic, strong) NSCoder                              *coder;
 @property (nonatomic, strong) dispatch_queue_t                     queue;
 @property (nonatomic, strong) dispatch_semaphore_t                 sempaphore;
 @property (nonatomic, strong) UIPercentDrivenInteractiveTransition *interactor;
 #if TARGET_OS_IOS
 @property (nonatomic, strong) UIScreenEdgePanGestureRecognizer     *_interactivePopGestureRecognizer;
 #endif
-@property (nonatomic, strong) NSArray                              *viewWillAppearAppearances;
-@property (nonatomic, strong) NSArray                              *viewWillDisappearAppearances;
-
 //@property (nonatomic, weak  ) UINavigationController               *statusBarController;
 //@property (nonatomic, weak  ) UINavigationController               *rotationController;
 //@property (nonatomic, weak  ) UINavigationController               *homeIndicatorController;
@@ -71,8 +71,8 @@ static inline void Main(void(^block)(void)){
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nil bundle:nil];
-    self.nibNameOrNil = nibNameOrNil;
-    self.nibBundleOrNil = nibBundleOrNil;
+    _nibNameOrNil = nibNameOrNil;
+    _nibBundleOrNil = nibBundleOrNil;
     [self config];
     return self;
 }
@@ -146,14 +146,13 @@ static inline void Main(void(^block)(void)){
             if (!navigationController){
                 navigationController = ({
                     UINavigationController  *v;
-                    if (self.coder){
-                        v = [[self.navigationControllerClass alloc] initWithCoder:self.coder];
-                    }else if (self.nibBundleOrNil || self.nibNameOrNil){
-                        v = [[self.navigationControllerClass alloc] initWithNibName:self.nibNameOrNil bundle:self.nibBundleOrNil];
+                    if (_coder){
+                        v = [[self.navigationControllerClass alloc] initWithCoder:_coder];
+                    }else if (_nibBundleOrNil || _nibNameOrNil){
+                        v = [[self.navigationControllerClass alloc] initWithNibName:_nibNameOrNil bundle:_nibBundleOrNil];
                     }else{
                         v = [[self.navigationControllerClass alloc] initWithNavigationBarClass:self.navigationBarClass toolbarClass:self.toolBarClass];
                     }
-                    v.uu_navigationController = self;
                     v.uu_viewController = obj;
                     v;
                 });
@@ -228,14 +227,13 @@ static inline void Main(void(^block)(void)){
             if (!navigationController){
                 navigationController = ({
                     UINavigationController  *v;
-                    if (self.coder){
-                        v = [[self.navigationControllerClass alloc] initWithCoder:self.coder];
-                    }else if (self.nibBundleOrNil && self.nibNameOrNil){
-                        v = [[self.navigationControllerClass alloc] initWithNavigationBarClass:self.navigationBarClass toolbarClass:self.toolBarClass];
+                    if (_coder){
+                        v = [[self.navigationControllerClass alloc] initWithCoder:_coder];
+                    }else if (_nibBundleOrNil || _nibNameOrNil){
+                        v = [[self.navigationControllerClass alloc] initWithNibName:_nibNameOrNil bundle:_nibBundleOrNil];
                     }else{
-                        v = [[self.navigationControllerClass alloc] initWithNibName:self.nibNameOrNil bundle:self.nibBundleOrNil];
+                        v = [[self.navigationControllerClass alloc] initWithNavigationBarClass:self.navigationBarClass toolbarClass:self.toolBarClass];
                     }
-                    v.uu_navigationController = self;
                     v.uu_viewController = obj;
                     v;
                 });
@@ -253,7 +251,7 @@ static inline void Main(void(^block)(void)){
         v = [v?v:@[] copy];
         v;
     });
-    animated = oldNavigationControllers.count>0?animated:NO;
+    animated = oldNavigationControllers.count>0 ? animated : NO;
     newNavigationControllers = [newNavigationControllers uu_unique];
     self.navigationControllers = newNavigationControllers;
     if (!animated){
@@ -288,9 +286,7 @@ static inline void Main(void(^block)(void)){
 - (void)setNewNavigationControllers:(NSArray<UINavigationController *> *)newNavigationControllers oldNavigationControllers:(NSArray<UINavigationController *> *)oldNavigationControllers animated:(BOOL)animated completion:(void(^)(BOOL))completion{
     
     __weak typeof(self) weakSelf = self;
-    
     dispatch_semaphore_wait(self.sempaphore, DISPATCH_TIME_FOREVER);
-    
     dispatch_group_t group = dispatch_group_create();
     
     UINavigationControllerOperation estimatedOperation = ({
@@ -302,7 +298,9 @@ static inline void Main(void(^block)(void)){
         }
         v;
     });
-        
+    
+    animated = estimatedOperation == UINavigationControllerOperationNone ? NO : animated;
+    
     NSArray<UINavigationController*> *willPopNavigationControllers = [oldNavigationControllers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"NOT (SELF IN %@)", newNavigationControllers]];
     
     NSMutableArray *sortedNavigationController = ({
@@ -349,7 +347,6 @@ static inline void Main(void(^block)(void)){
     NSMutableArray<void(^)(void)> *appearDidCancels  = [NSMutableArray arrayWithCapacity:sortedCount];
     NSMutableArray<void(^)(void)> *appeareDidFinishs = [NSMutableArray arrayWithCapacity:sortedCount];
     NSMutableArray<id>            *animators         = [NSMutableArray arrayWithCapacity:sortedCount];// retain animator for animationEnded:
-    
     __block  BOOL appeared = NO, shouldCancel = NO;
     
     void(^prepareView)(void) = ^{
@@ -407,7 +404,7 @@ static inline void Main(void(^block)(void)){
         [animators removeAllObjects];
     };
     BOOL isPop = estimatedOperation == UINavigationControllerOperationPop;
-    BOOL nextIsTransparentAndVisble = YES;
+    __block BOOL nextIsTransparentAndVisible = YES;
     NSNumber *completionCurve;
     UIView *selfView = ({
         __block UIView *v = nil;
@@ -438,10 +435,10 @@ static inline void Main(void(^block)(void)){
             fromViewController = navigationController;
             toViewController = i==0?nil:sortedNavigationController[i-1];
             operation = UINavigationControllerOperationPop;
-            isAnimated = animated && toViewController;
+            isAnimated = animated && toViewController && oldVisible;
             Main(^{
-                __strong typeof(weakSelf) self = weakSelf;
                 if ([self.delegate respondsToSelector:@selector(navigationController:animationControllerForOperation:fromViewController:toViewController:)]){
+                    __strong typeof(weakSelf) self = weakSelf;
                     animator = [self.delegate navigationController:self animationControllerForOperation:operation fromViewController:fromViewController.uu_viewController toViewController:toViewController?toViewController.uu_viewController:({
                         UINavigationController *v = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
                         v;
@@ -453,14 +450,14 @@ static inline void Main(void(^block)(void)){
             }
         }else {
             // push
-            newVisible = nextIsTransparentAndVisble;
+            newVisible = nextIsTransparentAndVisible;
             fromViewController = i==0?nil:sortedNavigationController[i-1];
             toViewController = navigationController;
             operation = UINavigationControllerOperationPush;
             isAnimated = animated && !inOld && fromViewController;
             Main(^{
-                __strong typeof(weakSelf) self = weakSelf;
                 if ([self.delegate respondsToSelector:@selector(navigationController:animationControllerForOperation:fromViewController:toViewController:)]){
+                    __strong typeof(weakSelf) self = weakSelf;
                     animator = [self.delegate navigationController:self animationControllerForOperation:operation fromViewController:fromViewController?fromViewController.uu_viewController:({
                         UINavigationController *v = [[UINavigationController alloc] initWithRootViewController:[UIViewController new]];
                         v;
@@ -470,16 +467,18 @@ static inline void Main(void(^block)(void)){
             if (!animator){
                 animator = [UUPushAnimator animatorWithOperation:operation];
             }
-            if ([animator conformsToProtocol:@protocol(UUViewControllerAnimatedTransitioning)]){
-                nextIsTransparentAndVisble = newVisible && [(id<UUViewControllerAnimatedTransitioning>)animator transparent];
-            }else{
-                nextIsTransparentAndVisble = NO;
-            }
-            if (!newVisible ||(oldVisible && newVisible)){
+            Main(^{
+                if ([animator conformsToProtocol:@protocol(UUViewControllerAnimatedTransitioning)]){
+                    nextIsTransparentAndVisible = newVisible && [(id<UUViewControllerAnimatedTransitioning>)animator transparent];
+                }else{
+                    nextIsTransparentAndVisible = NO;
+                }
+            });
+            if (oldVisible == newVisible){
                 continue;
             }
         }
-    
+        
         BOOL backItemVisible = (newVisible && navigationController != newNavigationControllers[0]) || (oldVisible && navigationController != oldNavigationControllers[0]);
         /// prepare views
         [prepareViews uu_addObject:^{
@@ -565,31 +564,12 @@ static inline void Main(void(^block)(void)){
         } reversed:isPop];
         
         [animators addObject:animator];
-        UU__UIViewControllerOneToOneTransitionContext *context = [[NSClassFromString([NSString stringWithFormat:@"_UIViewControllerOne%@", @"ToOneTransitionContext"]) alloc] init];
-        [context uu__setContainerView:selfView];
-        [context uu__setIsAnimated:isAnimated];
-        [context uu__setFromViewController:fromViewController];
-        [context uu__setToViewController:toViewController];
-        [context uu__setAnimator:animator];
-        [context uu__setAllowUserInteraction:false];
-        [context uu__setCompletionCurve:completionCurve ? completionCurve.longLongValue: 7];
-        [context uu__setState:1];
-        [context uu__setTransitionIsInFlight:true];
-        [context uu__setDuration:[animator transitionDuration:(id<UIViewControllerContextTransitioning>)context]];
-        __weak typeof(context) weakContext = context;
-        [context uu__setDidCompleteHandler:^{
-            dispatch_group_leave(group);
-            [weakContext uu__setIsAnimated:false];
-            [weakContext uu__setState:0];
-            [weakContext uu__setTransitionIsInFlight:0];
-            [weakContext uu__setAnimator:nil];
-            [weakContext uu__setInteractor:nil];
-        }];
+        
         id<UIViewControllerInteractiveTransitioning> interactor;
         if (c == i){
             Main(^{
-                __strong typeof(weakSelf) self = weakSelf;
                 if ([self.delegate respondsToSelector:@selector(navigationController:interactionControllerForAnimationController:)]){
+                    __strong typeof(weakSelf) self = weakSelf;
                     self.interactor = [self.delegate navigationController:self interactionControllerForAnimationController:animator];
                 }
             });
@@ -597,17 +577,58 @@ static inline void Main(void(^block)(void)){
             if (interactor){
                 completionCurve = @(interactor.completionCurve);
             }
-            [context uu__setCompletionCurve:completionCurve ? completionCurve.longLongValue: 7];
+        }
+        UU__UIViewControllerOneToOneTransitionContext *(^createContext)(id animator, id interactor) = ^(id animator, id interactor){
+            UU__UIViewControllerOneToOneTransitionContext *context = [[NSClassFromString([NSString stringWithFormat:@"_UIViewControllerOne%@", @"ToOneTransitionContext"]) alloc] init];
+            [context uu__setContainerView:selfView];
+            [context uu__setIsAnimated:isAnimated];
+            [context uu__setFromViewController:fromViewController];
+            [context uu__setToViewController:toViewController];
+            [context uu__setAnimator:animator];
+            [context uu__setAllowUserInteraction:false];
+            [context uu__setCompletionCurve:completionCurve != nil ? completionCurve.longLongValue: 7];
+            [context uu__setState:1];
+            [context uu__setTransitionIsInFlight:true];
+             __block NSTimeInterval duration;
+             Main(^{
+                 duration = [animator transitionDuration:(id<UIViewControllerContextTransitioning>)context];
+             });
+            [context uu__setDuration:duration];
+            __weak typeof(context) weakContext = context;
+            [context uu__setDidCompleteHandler:^{
+                dispatch_group_leave(group);
+                [weakContext uu__setIsAnimated:false];
+                [weakContext uu__setState:0];
+                [weakContext uu__setTransitionIsInFlight:0];
+                [weakContext uu__setAnimator:nil];
+                [weakContext uu__setInteractor:nil];
+            }];
+            return context;
+        };
+   
+        UU__UIViewControllerOneToOneTransitionContext *context = createContext(animator, interactor);
+        if (interactor){
+            __weak typeof(context) weakContext = context;
             [context setUu_willCancel:^{
                 willCancel();
             }];
             [context uu__setInitiallyInteractive:true];
             [context uu__setCurrentlyInteractive:true];
             [context uu__setInteractor:interactor];
+            [appearWillCancels uu_addObject:^{
+                [weakContext uu_setTransitionWasCancelled:YES];
+            } reversed:!isPop];
         }
-        [appearWillCancels uu_addObject:^{
-            [weakContext uu_setTransitionWasCancelled:YES];
-        } reversed:!isPop];
+        if (self.heroEnabled && isAnimated){
+            UUHeroAnimator *heroAnimator = [UUHeroAnimator animatorWithOperation:operation];
+            UU__UIViewControllerOneToOneTransitionContext *context = createContext(heroAnimator, nil);
+            [animators addObject:heroAnimator];
+            [startTransitions uu_addObject:^{
+                dispatch_group_enter(group);
+                [context uu___runAlongsideAnimations];
+                [heroAnimator animateTransition:(id<UIViewControllerContextTransitioning>)context];
+            } reversed:YES];
+        }
         
         __weak typeof(interactor) weakInteractor = interactor;
         [startTransitions uu_addObject:^{
@@ -627,6 +648,7 @@ static inline void Main(void(^block)(void)){
                 [animator animateTransition:(id<UIViewControllerContextTransitioning>)context];
             }
         } reversed:YES];
+      
     }
     Main(^{
         willStart();
@@ -818,17 +840,17 @@ static inline void Main(void(^block)(void)){
         [self uu_addChildViewController:viewController];
         [viewController didMoveToParentViewController:self];
     }
-    self.viewWillAppearAppearances = array;
+    _viewWillAppearAppearances = array;
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    for (UIViewController *viewController in self.viewWillAppearAppearances){
+    for (UIViewController *viewController in _viewWillAppearAppearances){
         [viewController endAppearanceTransition];
         if ([self.delegate respondsToSelector:@selector(navigationController:didShowViewController:animated:)]){
             [self.delegate navigationController:self didShowViewController:viewController animated:animated];
         }
     }
-    self.viewWillAppearAppearances = nil;
+    _viewWillAppearAppearances = nil;
     [super viewDidAppear:animated];
 }
 
@@ -842,14 +864,14 @@ static inline void Main(void(^block)(void)){
         [viewController willMoveToParentViewController:nil];
         [viewController removeFromParentViewController];
     }
-    self.viewWillDisappearAppearances = array;
+    _viewWillDisappearAppearances = array;
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
-    for (UIViewController *viewController in self.viewWillDisappearAppearances){
+    for (UIViewController *viewController in _viewWillDisappearAppearances){
         [viewController endAppearanceTransition];
     }
-    self.viewWillDisappearAppearances = nil;
+    _viewWillDisappearAppearances = nil;
     [super viewDidDisappear:animated];
 }
 
@@ -894,7 +916,7 @@ static inline void Main(void(^block)(void)){
 
 - (dispatch_queue_t)queue{
     if (_queue) return _queue;
-    _queue = dispatch_queue_create("com.neutronstarer.stacknavigationcontroller", DISPATCH_QUEUE_SERIAL);
+    _queue = dispatch_queue_create("com.neutronstarer.uunavigationcontroller", DISPATCH_QUEUE_SERIAL);
     dispatch_set_target_queue(_queue, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0));
     return _queue;
 }

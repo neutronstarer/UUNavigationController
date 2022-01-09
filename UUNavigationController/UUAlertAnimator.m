@@ -30,12 +30,12 @@
     UIView *fromView       = [transitionContext viewForKey:UITransitionContextFromViewKey];
     UIView *toView         = [transitionContext viewForKey:UITransitionContextToViewKey];
     if (self.operation == UINavigationControllerOperationPop){
-        toView.layer.transform = CATransform3DIdentity;
         if (!transitionContext.isAnimated){
-            [fromView uu_removeTransparentBackgroundView];
+            toView.layer.transform = CATransform3DIdentity;
             [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
             return;
         }
+        toView.layer.transform = CATransform3DIdentity;
         UIView *backgroundView = [fromView uu_addTransparentBackgroundView];
         backgroundView.alpha = 0.5;
         [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0 options:UIViewAnimationOptionCurveLinear|UIViewAnimationOptionBeginFromCurrentState animations:^{

@@ -80,13 +80,13 @@
     [self uu_setViewControllers:self.uu_backItemVisible?@[[[UIViewController alloc]init], uu_viewController]:@[uu_viewController] animated:NO];
 }
 
-//- (NSArray*)uu_viewControllers{
-//    UUNavigationController *v = self.uu_navigationController;
-//    if (!v){
-//        return [self uu_viewControllers];
-//    }
-//    return [self.uu_navigationController viewControllers];
-//}
+- (NSArray*)uu_viewControllers{
+    UUNavigationController *v = self.uu_navigationController;
+    if (!v){
+        return [self uu_viewControllers];
+    }
+    return [self.uu_navigationController viewControllers];
+}
 
 - (void)uu_setViewControllers:(NSArray<__kindof UIViewController *> *)viewControllers{
     UUNavigationController *v = self.uu_navigationController;
@@ -243,7 +243,7 @@
 //#endif
 
 + (void)load{
-//    [self uu_swizzleOriginalSelector:@selector(viewControllers) alteredSelector:@selector(uu_viewControllers)];
+    [self uu_swizzleOriginalSelector:@selector(viewControllers) alteredSelector:@selector(uu_viewControllers)];
     [self uu_swizzleOriginalSelector:@selector(navigationBar:shouldPopItem:) alteredSelector:@selector(uu_navigationBar:shouldPopItem:)];
     [self uu_swizzleOriginalSelector:@selector(setViewControllers:) alteredSelector:@selector(uu_setViewControllers:)];
     [self uu_swizzleOriginalSelector:@selector(setViewControllers:animated:) alteredSelector:@selector(uu_setViewControllers:animated:)];

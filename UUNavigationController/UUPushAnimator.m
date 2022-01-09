@@ -24,28 +24,19 @@
 
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext{
 #if TARGET_OS_IOS
-    __block NSTimeInterval duration = 0;
-    if ([NSThread isMainThread]){
-        duration = UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation)? 0.25: UINavigationControllerHideShowBarDuration;
-    }else{
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            duration = UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation)? 0.25: UINavigationControllerHideShowBarDuration;
-        });
-    }
-    return duration;
+    return UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation)? 0.25: UINavigationControllerHideShowBarDuration;
 #else
     return UINavigationControllerHideShowBarDuration;
 #endif
 }
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext{
-    UIView *fromView           = [transitionContext viewForKey:UITransitionContextFromViewKey];
-    UIView *toView             = [transitionContext viewForKey:UITransitionContextToViewKey];
-    UIView *containerView      = [transitionContext containerView];
+    UIView *fromView      = [transitionContext viewForKey:UITransitionContextFromViewKey];
+    UIView *toView        = [transitionContext viewForKey:UITransitionContextToViewKey];
+    UIView *containerView = [transitionContext containerView];
     if (self.operation == UINavigationControllerOperationPop){
         if (!transitionContext.isAnimated){
-            toView.layer.transform   = CATransform3DIdentity;
-            fromView.layer.transform = CATransform3DTranslate(CATransform3DIdentity, fromView.bounds.size.width, 0, 0);
+            toView.layer.transform = CATransform3DIdentity;
             [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
             return;
         }

@@ -8,7 +8,7 @@
 #import "UUViewControllerAnimatedTransitioning.h"
 
 NS_ASSUME_NONNULL_BEGIN
-/// Action sheet style
+// Action sheet style.
 @interface UUActionSheetAnimator: NSObject<UUViewControllerAnimatedTransitioning>
 
 + (instancetype)animatorWithOperation:(UINavigationControllerOperation)operation;

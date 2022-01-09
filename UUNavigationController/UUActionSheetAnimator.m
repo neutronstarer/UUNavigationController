@@ -33,8 +33,6 @@
     if (self.operation == UINavigationControllerOperationPop){
         if (!transitionContext.isAnimated){
             toView.layer.transform   = CATransform3DIdentity;
-            fromView.layer.transform = CATransform3DTranslate(CATransform3DIdentity, 0, fromView.bounds.size.height, 0);
-            [fromView uu_removeTransparentBackgroundView];
             [transitionContext completeTransition:![transitionContext transitionWasCancelled]];
             return;
         }

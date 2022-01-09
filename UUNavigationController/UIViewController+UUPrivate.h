@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIViewController (UUPrivate)
 
-@property (nonatomic, weak, nullable) UUNavigationController *uu_navigationController;
+@property (readonly, nullable) UUNavigationController *uu_navigationController;
 
 @end
 

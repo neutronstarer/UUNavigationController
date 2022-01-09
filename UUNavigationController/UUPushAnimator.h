@@ -8,7 +8,7 @@
 @import UIKit;
 
 NS_ASSUME_NONNULL_BEGIN
-/// Push style
+// Push style.
 @interface UUPushAnimator : NSObject<UIViewControllerAnimatedTransitioning>
 
 + (instancetype)animatorWithOperation:(UINavigationControllerOperation)operation;

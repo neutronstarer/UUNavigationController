@@ -34,6 +34,20 @@
 		CE9F9B8F274F8900000AA482 /* UUFadeAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9F9B8B274F8900000AA482 /* UUFadeAnimator.m */; };
 		CEA11FE5276D0C2A006754E5 /* UUNavigationController+UU.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA11FE4276D0C2A006754E5 /* UUNavigationController+UU.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEA11FE6276D0C2A006754E5 /* UUNavigationController+UU.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA11FE4276D0C2A006754E5 /* UUNavigationController+UU.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEADCFCA278A11CD0004599F /* UUCurtainAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CEADCFC8278A11CD0004599F /* UUCurtainAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEADCFCB278A11CD0004599F /* UUCurtainAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CEADCFC8278A11CD0004599F /* UUCurtainAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEADCFCC278A11CD0004599F /* UUCurtainAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADCFC9278A11CD0004599F /* UUCurtainAnimator.m */; };
+		CEADCFCD278A11CD0004599F /* UUCurtainAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADCFC9278A11CD0004599F /* UUCurtainAnimator.m */; };
+		CEADCFD6278A21DA0004599F /* UIView+UUPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CEADCFD4278A21DA0004599F /* UIView+UUPrivate.h */; };
+		CEADCFD7278A21DA0004599F /* UIView+UUPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = CEADCFD4278A21DA0004599F /* UIView+UUPrivate.h */; };
+		CEADCFD8278A21DA0004599F /* UIView+UUPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADCFD5278A21DA0004599F /* UIView+UUPrivate.m */; };
+		CEADCFD9278A21DA0004599F /* UIView+UUPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADCFD5278A21DA0004599F /* UIView+UUPrivate.m */; };
+		CEADCFDC278A21F70004599F /* UIView+UU.h in Headers */ = {isa = PBXBuildFile; fileRef = CEADCFDA278A21F70004599F /* UIView+UU.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEADCFDD278A21F70004599F /* UIView+UU.h in Headers */ = {isa = PBXBuildFile; fileRef = CEADCFDA278A21F70004599F /* UIView+UU.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CEADCFE8278A26970004599F /* UUHeroAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADCFE6278A26970004599F /* UUHeroAnimator.m */; };
+		CEADCFE9278A26970004599F /* UUHeroAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CEADCFE6278A26970004599F /* UUHeroAnimator.m */; };
+		CEADCFEA278A26970004599F /* UUHeroAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CEADCFE7278A26970004599F /* UUHeroAnimator.h */; };
+		CEADCFEB278A26970004599F /* UUHeroAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CEADCFE7278A26970004599F /* UUHeroAnimator.h */; };
 		CEC9911E273C06180058A112 /* UUPresentAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = CEC9911C273C06180058A112 /* UUPresentAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEC9911F273C06180058A112 /* UUPresentAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC9911D273C06180058A112 /* UUPresentAnimator.m */; };
 		CED3D65A27391FA7007AAB6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED3D65927391FA7007AAB6F /* AppDelegate.swift */; };
@@ -77,8 +91,6 @@
 		CEE91780274F3E56009F5964 /* NSArray+UUPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FE72732BB31001E5F94 /* NSArray+UUPrivate.m */; };
 		CEE91781274F3E56009F5964 /* NSMutableArray+UUPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FE62732BB31001E5F94 /* NSMutableArray+UUPrivate.m */; };
 		CEE91782274F3E56009F5964 /* UUNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7A2FCB2732ADD0001E5F94 /* UUNavigationController.m */; };
-		CEE9178A274F65A2009F5964 /* UUNavigationControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE91789274F65A2009F5964 /* UUNavigationControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CEE9178B274F65A2009F5964 /* UUNavigationControllerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE91789274F65A2009F5964 /* UUNavigationControllerDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEE9178D274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE9178C274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEE9178E274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE9178C274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEF2074B274F733A009C8FFC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF2074A274F733A009C8FFC /* Extensions.swift */; };
@@ -139,6 +151,13 @@
 		CE9F9B8A274F8900000AA482 /* UUFadeAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUFadeAnimator.h; sourceTree = "<group>"; };
 		CE9F9B8B274F8900000AA482 /* UUFadeAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUFadeAnimator.m; sourceTree = "<group>"; };
 		CEA11FE4276D0C2A006754E5 /* UUNavigationController+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UUNavigationController+UU.h"; sourceTree = "<group>"; };
+		CEADCFC8278A11CD0004599F /* UUCurtainAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUCurtainAnimator.h; sourceTree = "<group>"; };
+		CEADCFC9278A11CD0004599F /* UUCurtainAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUCurtainAnimator.m; sourceTree = "<group>"; };
+		CEADCFD4278A21DA0004599F /* UIView+UUPrivate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+UUPrivate.h"; sourceTree = "<group>"; };
+		CEADCFD5278A21DA0004599F /* UIView+UUPrivate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+UUPrivate.m"; sourceTree = "<group>"; };
+		CEADCFDA278A21F70004599F /* UIView+UU.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+UU.h"; sourceTree = "<group>"; };
+		CEADCFE6278A26970004599F /* UUHeroAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UUHeroAnimator.m; sourceTree = "<group>"; };
+		CEADCFE7278A26970004599F /* UUHeroAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UUHeroAnimator.h; sourceTree = "<group>"; };
 		CEC9911C273C06180058A112 /* UUPresentAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUPresentAnimator.h; sourceTree = "<group>"; };
 		CEC9911D273C06180058A112 /* UUPresentAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUPresentAnimator.m; sourceTree = "<group>"; };
 		CED3D65727391FA7007AAB6F /* Example iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,7 +176,6 @@
 		CED3D683273A673A007AAB6F /* UUActionSheetAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UUActionSheetAnimator.m; sourceTree = "<group>"; };
 		CED3D686273A6E31007AAB6F /* ActionSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
 		CEE9174F274F3DE1009F5964 /* UUNavigationController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UUNavigationController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEE91789274F65A2009F5964 /* UUNavigationControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUNavigationControllerDelegate.h; sourceTree = "<group>"; };
 		CEE9178C274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UUViewControllerAnimatedTransitioning.h; sourceTree = "<group>"; };
 		CEF2074A274F733A009C8FFC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		CEF9C7CF276B99B0009C6BD5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -241,9 +259,12 @@
 				CED3D67F27392AE9007AAB6F /* UUPushAnimator.m */,
 				CE9F9B8A274F8900000AA482 /* UUFadeAnimator.h */,
 				CE9F9B8B274F8900000AA482 /* UUFadeAnimator.m */,
+				CEADCFC8278A11CD0004599F /* UUCurtainAnimator.h */,
+				CEADCFC9278A11CD0004599F /* UUCurtainAnimator.m */,
+				CEADCFE7278A26970004599F /* UUHeroAnimator.h */,
+				CEADCFE6278A26970004599F /* UUHeroAnimator.m */,
 				CE7A2FDD2732B982001E5F94 /* UUTransparentBackgroundView.h */,
 				CE7A2FDE2732B982001E5F94 /* UUTransparentBackgroundView.m */,
-				CEE91789274F65A2009F5964 /* UUNavigationControllerDelegate.h */,
 				CEE9178C274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h */,
 				CE7A2FE82732BB31001E5F94 /* NSArray+UUPrivate.h */,
 				CE7A2FE72732BB31001E5F94 /* NSArray+UUPrivate.m */,
@@ -257,6 +278,9 @@
 				CE7A2FC82732AD94001E5F94 /* UIViewController+UUPrivate.m */,
 				CE5057D727343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.h */,
 				CE5057D627343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.m */,
+				CEADCFD4278A21DA0004599F /* UIView+UUPrivate.h */,
+				CEADCFD5278A21DA0004599F /* UIView+UUPrivate.m */,
+				CEADCFDA278A21F70004599F /* UIView+UU.h */,
 			);
 			path = UUNavigationController;
 			sourceTree = "<group>";
@@ -296,7 +320,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEE9178A274F65A2009F5964 /* UUNavigationControllerDelegate.h in Headers */,
+				CEADCFCA278A11CD0004599F /* UUCurtainAnimator.h in Headers */,
 				CED3D68027392AE9007AAB6F /* UUPushAnimator.h in Headers */,
 				CE7A2FD72732B349001E5F94 /* NSObject+UUPrivate.h in Headers */,
 				CE7A2FE92732BB31001E5F94 /* NSMutableArray+UUPrivate.h in Headers */,
@@ -305,6 +329,7 @@
 				CE9F9B8C274F8900000AA482 /* UUFadeAnimator.h in Headers */,
 				CE7A2FC52732AD81001E5F94 /* UIViewController+UU.h in Headers */,
 				CEC9911E273C06180058A112 /* UUPresentAnimator.h in Headers */,
+				CEADCFEA278A26970004599F /* UUHeroAnimator.h in Headers */,
 				CE7A2FDF2732B982001E5F94 /* UUTransparentBackgroundView.h in Headers */,
 				CE5057EB273554B5002B2B46 /* UUAlertAnimator.h in Headers */,
 				CE7A2FD32732AF62001E5F94 /* UINavigationController+UU.h in Headers */,
@@ -312,7 +337,9 @@
 				CEE9178D274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h in Headers */,
 				CE7A2FCF2732AF56001E5F94 /* UINavigationController+UUPrivate.h in Headers */,
 				CE7A2FC92732AD94001E5F94 /* UIViewController+UUPrivate.h in Headers */,
+				CEADCFD6278A21DA0004599F /* UIView+UUPrivate.h in Headers */,
 				CED3D684273A673A007AAB6F /* UUActionSheetAnimator.h in Headers */,
+				CEADCFDC278A21F70004599F /* UIView+UU.h in Headers */,
 				CE7A2FEC2732BB31001E5F94 /* NSArray+UUPrivate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -321,6 +348,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEADCFCB278A11CD0004599F /* UUCurtainAnimator.h in Headers */,
 				CEE91777274F3E56009F5964 /* UUActionSheetAnimator.h in Headers */,
 				CEE9176E274F3E56009F5964 /* NSObject+UUPrivate.h in Headers */,
 				CEE91772274F3E56009F5964 /* UU__UIViewControllerOneToOneTransitionContext.h in Headers */,
@@ -329,6 +357,7 @@
 				CEA11FE6276D0C2A006754E5 /* UUNavigationController+UU.h in Headers */,
 				CEE91778274F3E56009F5964 /* UUAlertAnimator.h in Headers */,
 				CEE91767274F3E55009F5964 /* UUNavigationController.h in Headers */,
+				CEADCFEB278A26970004599F /* UUHeroAnimator.h in Headers */,
 				CEE9176A274F3E55009F5964 /* UIViewController+UU.h in Headers */,
 				CEE91776274F3E56009F5964 /* NSArray+UUPrivate.h in Headers */,
 				CEE91773274F3E56009F5964 /* UIViewController+UUPrivate.h in Headers */,
@@ -336,8 +365,9 @@
 				CEE9177D274F3E56009F5964 /* UINavigationController+UU.h in Headers */,
 				CEE91769274F3E55009F5964 /* NSMutableArray+UUPrivate.h in Headers */,
 				CEE9176F274F3E56009F5964 /* UINavigationController+UUPrivate.h in Headers */,
-				CEE9178B274F65A2009F5964 /* UUNavigationControllerDelegate.h in Headers */,
+				CEADCFD7278A21DA0004599F /* UIView+UUPrivate.h in Headers */,
 				CE9F9B8D274F8900000AA482 /* UUFadeAnimator.h in Headers */,
+				CEADCFDD278A21F70004599F /* UIView+UU.h in Headers */,
 				CEE9178E274F6616009F5964 /* UUViewControllerAnimatedTransitioning.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,8 +551,10 @@
 				CE7A2FCA2732AD94001E5F94 /* UIViewController+UUPrivate.m in Sources */,
 				CE7A2FEB2732BB31001E5F94 /* NSArray+UUPrivate.m in Sources */,
 				CED3D685273A673A007AAB6F /* UUActionSheetAnimator.m in Sources */,
+				CEADCFCC278A11CD0004599F /* UUCurtainAnimator.m in Sources */,
 				CE5057D827343AD9002B2B46 /* UU__UIViewControllerOneToOneTransitionContext.m in Sources */,
 				CE7A2FD42732AF62001E5F94 /* UINavigationController+UUPrivate.m in Sources */,
+				CEADCFD8278A21DA0004599F /* UIView+UUPrivate.m in Sources */,
 				CE7A2FEA2732BB31001E5F94 /* NSMutableArray+UUPrivate.m in Sources */,
 				CEC9911F273C06180058A112 /* UUPresentAnimator.m in Sources */,
 				CE9F9B8E274F8900000AA482 /* UUFadeAnimator.m in Sources */,
@@ -530,6 +562,7 @@
 				CED3D68127392AE9007AAB6F /* UUPushAnimator.m in Sources */,
 				CE5057EC273554B5002B2B46 /* UUAlertAnimator.m in Sources */,
 				CE7A2FD82732B349001E5F94 /* NSObject+UUPrivate.m in Sources */,
+				CEADCFE8278A26970004599F /* UUHeroAnimator.m in Sources */,
 				CE7A2FCC2732ADD0001E5F94 /* UUNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,8 +589,10 @@
 				CEE91775274F3E56009F5964 /* UIViewController+UUPrivate.m in Sources */,
 				CEE91774274F3E56009F5964 /* UUPushAnimator.m in Sources */,
 				CEE9177A274F3E56009F5964 /* UU__UIViewControllerOneToOneTransitionContext.m in Sources */,
+				CEADCFCD278A11CD0004599F /* UUCurtainAnimator.m in Sources */,
 				CE9F9B8F274F8900000AA482 /* UUFadeAnimator.m in Sources */,
 				CEE91771274F3E56009F5964 /* NSObject+UUPrivate.m in Sources */,
+				CEADCFD9278A21DA0004599F /* UIView+UUPrivate.m in Sources */,
 				CEE91780274F3E56009F5964 /* NSArray+UUPrivate.m in Sources */,
 				CEE91770274F3E56009F5964 /* UINavigationController+UUPrivate.m in Sources */,
 				CEE91781274F3E56009F5964 /* NSMutableArray+UUPrivate.m in Sources */,
@@ -565,6 +600,7 @@
 				CEE9176B274F3E55009F5964 /* UUAlertAnimator.m in Sources */,
 				CEE91782274F3E56009F5964 /* UUNavigationController.m in Sources */,
 				CEE91779274F3E56009F5964 /* UUTransparentBackgroundView.m in Sources */,
+				CEADCFE9278A26970004599F /* UUHeroAnimator.m in Sources */,
 				CEE91768274F3E55009F5964 /* UUPresentAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

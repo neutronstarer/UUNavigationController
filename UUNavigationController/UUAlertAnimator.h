@@ -8,7 +8,7 @@
 #import "UUViewControllerAnimatedTransitioning.h"
 
 NS_ASSUME_NONNULL_BEGIN
-/// Alert style
+// Alert style.
 @interface UUAlertAnimator : NSObject<UUViewControllerAnimatedTransitioning>
 
 + (instancetype)animatorWithOperation:(UINavigationControllerOperation)operation;
